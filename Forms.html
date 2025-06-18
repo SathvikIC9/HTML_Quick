@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 30px;
+        }
+
+        form {
+            background-color: #fff;
+            max-width: 600px;
+            margin: auto;
+            padding: 25px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+            margin-top: 30px;
+            color: #333;
+        }
+
+        div {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"],
+        input[type="time"],
+        input[type="date"],
+        input[type="file"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        select:invalid {
+            color: gray;
+        }
+
+        .radio-group label {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: normal;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="/submit.php">
+        <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Enter name">
+        </div>
+        <div>
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" placeholder="Enter Mobile">
+
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input for='email' type="email" placeholder="Enter Email">
+        </div>
+        <div>
+            <label for="time">Time</label>
+            <input for='time' type="time" placeholder="Select time">
+        </div>
+        <div>
+            <label for="date">Date</label>
+            <input for='date' type="date">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input for='password' type="password" placeholder="Enter password">
+            <div>
+                <label for="resume">Resume</label>
+                <input for='resume' type="file" placeholder="Upload file here">
+            </div>
+            <!-- <div>
+                <label>Gender</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div> -->
+            <div>
+                <label for="gender">Gender</label>
+                <select id="gender" required>
+                    <option value="" disabled selected>Select your gender</option>
+                    <option value="Male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="plans">Subscription Plans</label><br>
+                <label for="basic">Basic</label>
+                <input type="radio" id="basic" name="plans" value="basic">
+                <label for="premium">Premium</label>
+                <input type="radio" id="premium" name="plans" value="premium">
+                <label for="VIP">VIP</label>
+                <input type="radio" id="VIP" name="plans" value="VIP">
+            </div>
+            <div>
+                <h4><b>Terms and conditions-</b></h4>
+                <label for="t&c">I agree to the terms and conditions</label>
+                <input type="radio" id="t&c" name="t&c" value="t&c">
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+    </form>
+
+</body>
+
+</html>
