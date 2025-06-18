@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #2e2e2e;
+      /* Dark grey background */
+      color: #f0f0f0;
+      /* Light text */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    a {
+      color: #66ccff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin: 20px auto;
+      font-family: Arial, sans-serif;
+      background-color: #403f3f;
+    }
+
+    th,
+    td {
+      border: 1px solid #fdfdfd;
+      padding: 12px 15px;
+      text-align: left;
+    }
+
+    thead {
+      background-color: #333;
+      color: white;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #403f3f;
+    }
+
+    tbody tr:hover {
+      background-color: #000000;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>Tables in HTML</h1>
+  <!-- Tables are used to display data in a tabular format. Tables have two parts the head and the body.-->
+  <table>
+    <!-- Table head has two parts. th (table heading ) and tr table row. th is used to define the heading of the table and tr is used to define the row -->
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <!-- Table bodey has two parts. td (table data ) and tr table row. th is used to define the data of the table and tr is used to define the row -->
+    <tbody>
+      <tr>
+        <td>IC</td>
+        <td>19</td>
+        <td>1.2 cr</td>
+      </tr>
+      <tr>
+        <td>Harry</td>
+        <td>27</td>
+        <td>50L</td>
+      </tr>
+      <tr>
+        <td>Shub</td>
+        <td>28</td>
+        <td>1.1 cr</td>
+      </tr>
+      <tr>
+        <td>Thank</td>
+        <td colspan="2"> you</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
