@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Form</title>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+  }
+
+  form {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  div {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #555;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  input[type="number"],
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+  }
+
+  input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  /* Transport options inline */
+  .transport-options label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal;
+  }
+
+  .transport-options input {
+    margin-right: 5px;
+  }
+
+  /* Terms checkbox inline */
+  .terms label {
+    display: inline;
+    font-weight: normal;
+  }
+</style>
+
+</head>
+<body>
+  <form action="submit.php" method="post">
+    <h3>Choose Locations</h3>
+
+    <div>
+      <label for="from">From</label>
+      <input id="from" name="from" type="text" placeholder="Enter From Location" required>
+    </div>
+
+    <div>
+      <label for="to">To</label>
+      <input id="to" name="to" type="text" placeholder="Enter To Location" required>
+    </div>
+
+    <div>
+      <label for="date">Date</label>
+      <input id="date" name="date" type="date" required>
+    </div>
+
+    <div>
+      <label for="adults">Adults</label>
+      <input id="adults" name="adults" type="number" min="0"><br>
+
+      <label for="kids">Kids</label>
+      <input id="kids" name="kids" type="number" min="0"><br>
+
+      <label for="seniors">Senior Citizens</label>
+      <input id="seniors" name="seniors" type="number" min="0">
+    </div>
+
+    <div>
+      <b>Transportation</b>
+      <input type="radio" id="flights" name="transport" value="Flights">
+      <label for="flights">Flights</label>
+      <input type="radio" id="trains" name="transport" value="Trains">
+      <label for="trains">Trains</label>
+      <input type="radio" id="buses" name="transport" value="Buses">
+      <label for="buses">Buses</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="terms" name="terms" required>
+      <label for="terms">I agree to the terms and conditions of the website.</label>
+    </div>
+
+    <div>
+      <input type="submit" value="Search">
+    </div>
+  </form>
+</body>
+</html>
